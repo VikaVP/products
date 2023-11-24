@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const CardProduct = (data: any) => {
-    console.log(data, 'card');
-    
     return <div className="card card-product">
             <div className="card-header">
                 {data.data.price}

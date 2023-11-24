@@ -36,7 +36,6 @@ function App() {
   }
 
   const handleChange = (e: any, inputName: any) => {
-    console.log(e?.target?.result, inputName);
     setData({
       ...data,
       [inputName]: e?.target?.value || e 
@@ -44,13 +43,10 @@ function App() {
   }
 
   const handleSubmit = useCallback((e: any) => {
-    e.preventDefault()
-    console.log(data, 'before');
-    
+    e.preventDefault() 
     if (!data.description || !data.price || !data.image) {
       alert("Required data must be fulfilled")
     } else {
-      console.log(data, 'data');
       setCardData([
         ...cardData,
         data
@@ -100,26 +96,7 @@ function App() {
         <div className="flex product-lists">
           {
             cardData.map((dt: any, i: number) => {
-              return <CardProduct data={dt} key={i}/> 
-            //   <div className="card card-product" key={i}>
-            //   <div className="card-header">
-            //     {dt.price} NT
-            //   </div>
-            //   <div className='img-card'>
-            //     <img src={dt.}/>
-            //   </div>
-            //   <div className="card-body">
-            //     <h3>
-            //     Pack of Beer (6pcs of heineken)
-            //     </h3>
-            //     <p>
-            //       Heineken lager beer, or known as just Heineken, is one of the pale beers with 5% alcohol.
-            //     </p>
-            //     <h4>
-            //       6pcs
-            //     </h4>
-            //   </div>
-            // </div>
+              return <CardProduct data={dt} key={i}/>
             })
           }
           <div className="card card-add" onClick={handleModal}>
@@ -164,7 +141,7 @@ function App() {
                         <select className='select-field' placeholder='Select category' onChange={(e) => {handleChange(e, 'category')}}>
                           <option value="">Select category</option>
                           {
-                            categories.map((category: any) => <option value={category}>{category}</option>)
+                            categories.map((category: any) => <option value={category} style={{color: '#000'}}>{category}</option>)
                           }
                         </select>
                     </div>
@@ -213,9 +190,7 @@ function App() {
                             </svg>
                           </div>
                         </div>
-                        <input type='file' id="image" onChange={(e:any) => {
-                          console.log(e.target.files[0], 'e');
-                          
+                        <input type='file' id="image" onChange={(e:any) => { 
                           const file = e.target.files[0]
                           if (file) {
                             setData({ ...data, image: URL.createObjectURL(file) })

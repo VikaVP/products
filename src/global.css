@@ -302,11 +302,9 @@ footer {
   border-radius: 3px;
   text-transform: uppercase;
   color: #585858;
-  /* font-family: 'Roboto', sans-serif; */
 }
 
 .modal {
-  /* visibility: hidden; */
   opacity: 1;
   position: fixed;
   top: 0;
@@ -327,11 +325,9 @@ footer {
 }
 
 .modal__content {
-  /* border-radius: 4px; */
   position: relative;
   width: 600px;
   max-width: 90%;
-  /* background: #fff; */
   padding: 1em 2em;
   border-radius: 8px;
   background: var(--foundation-dark-dark-800, #222);
@@ -364,14 +360,11 @@ footer {
 }
 
 .nt-prepend {
-  /* position: absolute;
-  left: 5px; */
   border-radius: 4px;
   border: 1px solid var(--black-70, #333);
   background-color: var(--black-90, #171717);
   border-right: none !important;
   height: 33px;
-  /* width: 100%; */
   color: #fff;
   box-sizing: border-box;
   padding-left: 10px;
@@ -423,8 +416,6 @@ form {
 }
 
 .input-field-prepend {
-  /* position: absolute;
-  left: 5px; */
   border-radius: 4px;
   border: 1px solid var(--black-70, #333);
   background-color: var(--black-90, #171717);
@@ -441,7 +432,6 @@ form {
 }
 
 .prepend-field {
-  /* position: relative; */
   display: flex;
   align-items: center;
 }
@@ -499,4 +489,45 @@ label {
   font-size: 14px;
   font-weight: 500;
   padding-bottom: 5px;
+}
+
+@media screen and (max-width:800px) {
+  .header {
+    margin: 20px;
+  }
+
+  .title-page > p {
+    font-size: 18px;
+  }
+
+  .content-wrapper {
+    margin: 20px;
+  }
+
+  .content-wrapper > .flex {
+    flex-direction: column;
+  }
+
+  .btn-import-wrapper {
+    justify-content: start;
+    margin-top: 20px;
+  }
+
+  .product-lists {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-lists > .card {
+    width: 90%;
+  }
+
+  .item > p {
+    font-size: 12px;
+  }
+
+  form > .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
