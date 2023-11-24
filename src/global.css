@@ -491,7 +491,7 @@ label {
   padding-bottom: 5px;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
   .header {
     margin: 20px;
   }
@@ -520,6 +520,33 @@ label {
 
   .product-lists > .card {
     width: 90%;
+  }
+
+  .item > p {
+    font-size: 12px;
+  }
+
+  form > .flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width: 912px) {
+  .header {
+    margin: 20px;
+  }
+
+  .content-wrapper {
+    margin: 20px;
+  }
+
+  form {
+    height: 55vh;
+  }
+
+  .card-add {
+    margin-left: 20px;
   }
 
   .item > p {
